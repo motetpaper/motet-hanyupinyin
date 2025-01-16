@@ -1,2 +1,2 @@
-# motet-tonemarks
-Add tone marks to pinyin in Google Sheets
+# motet-hanyupinyin
+Convert Chinese characters to Hanyu Pinyin in Google Sheets
