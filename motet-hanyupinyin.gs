@@ -2,7 +2,7 @@
  * hpt.gs
  * job    : Adds Hanyu Pinyin custom function to Google Sheets
  * git    : https://github.com/motetpaper/motet-hanyupinyin
- * lic    : MIT
+ * lic    : MIT https://opensource.org/license/mit
  * version: 3.1
  * @OnlyCurrentDoc Limits the script to only accessing the current spreadsheet.
  */
