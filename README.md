@@ -15,8 +15,8 @@ There is exactly one FORMULA in this Google Sheets add-on.
 + `=MOTET_HANYUPINYIN(text)`
 
 ### Example
-+ text: 汉语拼音
-+ Output: han4 yu3 pin1 yin1
++ text: `汉语拼音`
++ Output: `han4 yu3 pin1 yin1`
 
 # LICENSE
   + MIT License
