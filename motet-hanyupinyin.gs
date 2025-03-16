@@ -10,7 +10,7 @@
 const pnyn = {};
 
 (function(){
-  const url = 'https://raw.githubusercontent.com/motetpaper/data/refs/heads/main/pnyn/hp.json'
+  const url = 'https://motetpaper.github.io/data/pnyn/tmiso.json'
   const headers = {
     'Cache-Control' : 'max-age=86400'
   };
