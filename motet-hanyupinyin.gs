@@ -3,21 +3,30 @@
  * job    : Adds Hanyu Pinyin custom function to Google Sheets
  * git    : https://github.com/motetpaper/motet-hanyupinyin
  * lic    : MIT https://opensource.org/license/mit
- * version: 3.1
+ * version: 3.2
  * @OnlyCurrentDoc Limits the script to only accessing the current spreadsheet.
  */
 
 const pnyn = {};
 
+// pre-flight IIFE that caches data
 (function(){
-  const url = 'https://motetpaper.github.io/data/pnyn/tmiso.json'
-  const headers = {
-    'Cache-Control' : 'max-age=86400'
-  };
-  const resp = UrlFetchApp.fetch(url, headers);
-  const text = resp.getContentText();
-  pnyn.data = JSON.parse(text.trim());
+  // returns JSON data from data source, given ID
+  function getdata(id) {
+    const url = `https://motetpaper.github.io/${id}`;
+    console.log(url);
+    const headers = {
+      'Cache-Control' : 'max-age=86400'
+    };
+    const response = UrlFetchApp.fetch(url, headers);
+    const text = response.getContentText();
+    return JSON.parse(text.trim());
+  }
+
+  pnyn.data = getdata('pnyn/hp.min.json');
 })();
+
+
 
 /**
  * Converts Chinese characters to Hanyu Pinyin with tone numbers.
@@ -28,6 +37,7 @@ const pnyn = {};
  */
 function MOTET_HANYUPINYIN(text) {
   switch(typeof text){
+      
     case 'string':
       return motet_hp_(text);
 
