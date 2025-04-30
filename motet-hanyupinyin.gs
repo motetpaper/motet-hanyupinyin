@@ -1,5 +1,5 @@
 /**
- * hpt.gs
+ * motet-hanyupinyin.gs
  * job    : Adds Hanyu Pinyin custom function to Google Sheets
  * git    : https://github.com/motetpaper/motet-hanyupinyin
  * lic    : MIT https://opensource.org/license/mit
